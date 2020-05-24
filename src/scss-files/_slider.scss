@@ -1,0 +1,60 @@
+.slider {
+    
+    &__pos {
+        padding-bottom: 100px;
+        background-color: #fff;
+    }
+    &__container {
+        position: relative;
+        width: 1280px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+}    
+.slicker {
+    &__item {
+        width: 470px;
+height: 250px;
+border: 1px solid rgba(0, 0, 0, 0.2);
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+border-radius: 10px;
+background-color: $white;
+margin-right: 30px;
+text-align: center;
+position: relative;
+    }
+
+    &__text {
+        padding: 40px 10px 26px 10px;
+        color: $grey7;
+        @include Roboto(500,18px);
+line-height: 26px;
+max-width: 400px;
+margin: 0 auto;
+z-index: 100;
+position: relative;
+    }
+
+    &__name {
+        color: $grey7;
+        @include Roboto(400,16px);
+line-height: 24px;
+margin: 0 auto;
+z-index: 100;
+position: relative;
+    }
+    &__comma {
+        @include Playfair(900,172px);
+        color: $lightblue;
+        position: absolute;
+        // bottom: 37.5%;
+        // left: 41.5%;
+        z-index: 0;
+        transform: translate(-50%,-50%);
+        top: 20%;
+        left: 50%;
+    
+    }
+}
+
+

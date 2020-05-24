@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+        link(rel="stylesheet" href="src/fonts/iconfont/material-icons.css")
+        link(rel="stylesheet", href="src/chosen/chosen.min.css" type="text/css")
+        link(rel="stylesheet", href="src/slick/slick/slick.css" type="text/css")
+        link(rel="stylesheet", href="src/slick/slick/slick-theme.css" type="text/css")
+        link(rel="stylesheet", href="styles.css" type="text/css")
+        
+        script(src="https://api-maps.yandex.ru/2.1/?lang=en_US")
+        script(src="src/js-files/jquery-3.5.0.min.js") 
+        script(src="//code.jquery.com/jquery-migrate-1.2.1.min.js")
+        script(src="src/chosen/chosen.jquery.min.js")
+        script(src="src/slick/slick/slick.min.js")
+        
+        script(src="src/js-files/buttons.js")
+        script(src="src/js-files/menu-list.js")
+        script(src="src/js-files/formDayRate.js")
+        script(src="src/js-files/chosenSelect.js")
+        script(src="src/js-files/formEmployees.js")
+        script(src="src/js-files/slick.js")
+        script(src="src/js-files/map.js")
+        script(src="src/js-files/link-icons.js")
+
+        title M-cash
+    body
+        .wrapper
+            main.page
+                .main-screen.js-main-screen
+                    .logo-menu
+                        .container
+                            .wrapper__flex-sb
+                                .logo-menu__pos 
+                                    img(src="src/img/logo1.png" alt="logo")
+                                nav.logo-menu__block.menu
+                                    ul.menu__list
+                                        li.menu__li
+                                            a.menu__a(href="#about") About Us
+                                        li.menu__li.menu__topmenu.js-menu-list
+                                            a.menu__a.expand.expand__li(href="#") Resources
+                                            ul.menu__submenu.hide
+                                                li.menu__li.menu__li--view
+                                                    a.menu__a(href="#") Our Resource 1
+                                                li.menu__li.menu__li--view
+                                                    a.menu__a(href="#") Our Resource 2
+                                                li.menu__li.menu__li--view
+                                                    a.menu__a(href="#") Our Resource 3
+                                        li.menu__li
+                                            a(href="#about").menu__btn.js-button Contact Us
+                    .belief-info    
+                        .wrapper__flex-sb
+                            .belief-info__block
+                                .belief-info__container
+                                    .belief-info__title-belief Be Smart, Think Smart, Save Money
+                                    .belief-info__text-belief Compare your take-home today
+                                    form#form.phone-submit.phone-submit__pos(action="send.php" method="post")
+                                        input.phone-submit__phone.js-phone(type="number" placeholder="Phone Number" name="PhoneNumber" min="0" oninput="validity.valid||(value='');" autofocus)
+                                        .wrapper__flex-row
+                                            input.phone-submit__rate.js-rate(type="number" placeholder="Day Rate" name="DayRate" min="1" oninput="validity.valid||(value='');")
+                                            input.phone-submit__submit.js-DayRate-Submit(type="submit" value="Submit" name="submit") 
+                                        .hide-show__dark-block.hide.js-hidden-block
+                                            .hide-show__hidden-block Your data has been received, we will call you back soon.
+                                        .hide-show__dark-block.hide.js-no-data-block  
+                                            .hide-show__hidden-block Enter your data please.
+                            .main-screen__img-pos
+                                .main-screen__img
+                                    img(src="src/img/img.png" alt="main-screen-img")       
+            .features
+                .title.features__title Features
+                .text.features__text Our key competitive advantages
+                .features__advantages
+                    .container
+                        .wrapper__flex-sa
+                            .advantages-elem
+                                .advantages-elem__icon1
+                                    img(src="src/img/feauture1.png" alt="feauture-icon")
+                                .advantages-elem__title Header
+                                .advantages-elem__text Interdum et malesuada fames ac ante primis in faucibus. Duis vitae sem lacus. ut eros vel libero pharetra pharetra. Praesent nec pellentesque risus. 
+                            .advantages-elem
+                                .advantages-elem__icon2
+                                    img(src="src/img/feauture2.png" alt="feauture-icon")
+                                .advantages-elem__title Header
+                                .advantages-elem__text Interdum et malesuada fames ac ante primis in faucibus. Duis vitae sem lacus. ut eros vel libero pharetra pharetra. Praesent nec pellentesque risus. 
+                            .advantages-elem
+                                .advantages-elem__icon3
+                                    img(src="src/img/feauture3.png" alt="feauture-icon")
+                                .advantages-elem__title Header
+                                .advantages-elem__text Interdum et malesuada fames ac ante primis in faucibus. Duis vitae sem lacus. ut eros vel libero pharetra pharetra. Praesent nec pellentesque risus. 
+            .steps
+                .title.steps__title How it works
+                .text.steps__text Get the result in 3 easy steps
+                .steps__count
+                    .container
+                        .wrapper__flex-sb
+                            .steps-elem
+                                .steps-elem__title 01
+                                .steps-elem__text Enter your details
+                            .steps-elem
+                                .steps-elem__title 02
+                                .steps-elem__text We calculate your take-home from over 200+ payroll provider
+                            .steps-elem
+                                .steps-elem__title 03
+                                .steps-elem__text We contact you to give you the results
+            .action
+                .action-block
+                    .action-block__decor1 
+                        img(src="src/img/decor1.png" alt="decor")
+                    .action-block__decor2 
+                        img(src="src/img/decor2.png" alt="decor")
+                    .action-block__title Call to action
+                    .action-block__text Mauris sed dapibus metus. Integer dictum fringilla metus, facilisis lacinia lorem facilisis eget. Mauris auctor lacinia velit, in pretium lectus placerat nec. Nam porttitor nisi in velit blandit ultricies. 
+                    button.action-block__button.js-button Learn more
+            .employees
+                .employees__block
+                    .decor-block
+                        img.decor3(src="src/img/decor3.png" alt="decor")
+                        img.decor4(src="src/img/decor3.png" alt="decor")
+                    .employees__titles
+                        span.employees__title Number of employees
+                        span.employees__title For the payroll, I use
+                        span.employees__title 
+                    form.employees__buttons
+                        input.employees__button1.js-number-employees(type="number" oninput="validity.valid||(value='');")
+                        .b-input
+                            select.employees__button2.expand.expand__btn.b-input__input.my_select_box.js-select-options(name="select" multiple)
+                                option(value="1") Option 1
+                                option(value="2") Option 2
+                                option(value="3") Option 3
+                                option(value="4") Option 4
+                                option(value="5") Option 5
+                                option(value="6") Option 6
+                                option(value="7") Option 7
+                                option(value="8") Option 8
+                                option(value="9") Option 9
+                                option(value="10") Option 10
+                                option(value="11") Option 11
+                                option(value="12") Option 12
+                                option(value="13") Option 13
+                                option(value="14") Option 14
+                                option(value="15") Option 15
+                        input.employees__button3.js-button.js-employees-submit(type="submit" value="Compare plans" name="submit")
+                        .hide-show__dark-block.hide.js-select-block
+                            .hide-show__hidden-block Select some options please
+                        .hide-show__dark-block.hide.js-employees-block
+                            .hide-show__hidden-block Enter number of employees please
+            .price
+                .title.price__title Price
+                .text.price__text Compare our tariff plans
+                .tiers
+                    .tier.tier__pos.js-tier1
+                        .tier__title Tier 1
+                        .tier__price
+                            span.tier__currency $ 
+                            span.tier__number 11.99 
+                            span.tier__month / month
+                        ul.tier__options
+                            li.tier__option-li.js-tr1 Option 1
+                            li.tier__option-li.js-tr1 Option 2
+                            li.tier__option-li.js-tr1 Option 3
+                            li.tier__option-li.js-tr1 Option 4
+                            li.tier__option-li.js-tr1 Option 5
+                        button.tier__btn.js-button Choose
+                    .tier.tier__pos.js-tier2
+                        .tier__title.tier__title--dark Tier 2
+                        .tier__price.tier__price--dark
+                            span.tier__currency $ 
+                            span.tier__number 19.99 
+                            span.tier__month / month
+                        ul.tier__options
+                            li.tier__option-li.js-tr2 Option 6
+                            li.tier__option-li.js-tr2 Option 7
+                            li.tier__option-li.js-tr2 Option 8
+                            li.tier__option-li.js-tr2 Option 9
+                            li.tier__option-li.js-tr2 Option 10
+                        button.tier__btn.tier__btn--dark.js-button Choose
+                    .tier.js-tier3
+                        .tier__title Tier 3
+                        .tier__price
+                            span.tier__currency $ 
+                            span.tier__number 29.99 
+                            span.tier__month / month
+                        ul.tier__options
+                            li.tier__option-li.js-tr3 Option 11
+                            li.tier__option-li.js-tr3 Option 12
+                            li.tier__option-li.js-tr3 Option 13
+                            li.tier__option-li.js-tr3 Option 14
+                            li.tier__option-li.js-tr3 Option 15
+                        button.tier__btn.js-button Choose
+            .partners
+                .title.partners__title Our partners
+                .text.partners__text We work with a lot of partners, it would be ugly of us not to mention them
+                .partners__links
+                    .container
+                        .wrapper__flex-sb
+                            a.partners__link(href="https://www.bp.com")
+                                img(src="src/img/partner1.png" alt="www.bp.com")
+                            a.partners__link(href="https://www.virgin.com")
+                                img(src="src/img/partner2.png" alt="www.virgin.com")
+                            a.partners__link(href="https://www.salisbury.nhs.uk")
+                                img(src="src/img/partner3.png" alt="www.salisbury.nhs.uk")
+                            a.partners__link(href="https://www.fraserhealth.ca")
+                                img(src="src/img/partner4-1.png" alt="www.fraserhealth.ca")
+                            a.partners__link(href="https://www.sony.co.uk")
+                                img(src="src/img/partner5.png" alt="www.sony.co.uk")
+            .review
+                .title.review__title Review
+                .text.review__text Our partners are in a hurry to share their opinions about us
+                .slider.slider__pos
+                    .slider__container
+                        include ./_slicker.pug
+            .faq
+                .container
+                    .title.faq__title FAQ
+                    .text.faq__text The answer to the questions you were afraid to ask
+                    .wrapper__flex-sb
+                        .faq__block
+                            p.faq__block-title Maecenas fringilla ante metus?
+                            p.faq__block-text Vestibulum eget feugiat nisl, aliquet ultrices nisi. Suspendisse quis nulla massa. Nunc eleifend mi nec molestie aliquam. Nulla turpis nunc, commodo a est id, pretium convallis sem. Praesent faucibus et neque at blandit. Quisque eget tincidunt enim, eget tempor ex.
+                        .faq__block
+                            p.faq__block-title Duis justo diam, rutrum non dignissim?
+                            p.faq__block-text Sed quis urna quam. Fusce vitae hendrerit purus. Donec aliquam justo sed vulputate porttitor. Integer laoreet lacinia odio id finibus. Proin mi libero, accumsan nec mauris nec, malesuada auctor orci. Mauris aliquet convallis eros, id ultrices mi sodales vel.
+                    .wrapper__flex-sb
+                        .faq__block
+                            p.faq__block-title Phasellus tellus urna, malesuada vel est sit amet?
+                            p.faq__block-text Sed ultricies eget velit quis dictum. Nulla finibus pellentesque arcu in rutrum. Maecenas ipsum lorem, lobortis maximus cursus nec, hendrerit volutpat sem. Nam rutrum sed dolor eget fringilla. Vestibulum erat velit, tincidunt eu ullamcorper in, hendrerit sed nunc.
+                        .faq__block
+                            p.faq__block-title Cras leo nulla, lacinia non suscipit sed, scelerisque nisi?
+                            p.faq__block-text Fusce volutpat ex ac magna aliquet porta. Donec fermentum pretium tellus, et consequat leo blandit eu. Mauris varius felis massa, bibendum egestas risus vehicula et. Fusce faucibus euismod nisl non fringilla. Integer semper dui justo, quis cursus mi tempus in. 
+                    button.faq__button.js-button All questions
+            include ./_map.pug
+            footer.footer
+                .superfooter
+                    .superfooter__logo-text
+                        .superfooter__logo
+                            img(src="src/img/logo2.png" alt="logo")
+                        .superfooter__text Praesent varius feugiat dolor, a pulvinar leo facilisis blandit. Sed quis lobortis mauris, et lacinia justo. Sed sollicitudin risus consequat pulvinar efficitur. Praesent ac augue in lorem laoreet bibendum. Vestibulum mattis accumsan nulla eget sagittis. 
+                    .superfooter__links-blocks
+                        .superfooter__block-link
+                            .superfooter__link-title Documents
+                            .superfooter__link-text
+                                a.superfooter__link(href="#") Privacy policy
+                                a.superfooter__link(href="#") Terms and conditions
+                        .superfooter__block-link
+                            .superfooter__link-title Menu
+                            .superfooter__link-text
+                                a.superfooter__link(href="#") About Us
+                                a.superfooter__link(href="#") Resources
+                                a.superfooter__link(href="#") Contact Us
+                        .superfooter__block-link
+                            .superfooter__link-title About company
+                            .superfooter__link-text
+                                a.superfooter__link(href="#") Company no.: 12345678
+                                a.superfooter__link(href="#") VAT Number: 123 4567 89
+                        .superfooter__block-link
+                            .superfooter__link-title Follow Us
+                            .superfooter__link-icons
+                                a.superfooter__link(href="https://www.facebook.com/")
+                                    img.js-icon1(src="src/img/social1.png" alt="facebook-icon")
+                                a.superfooter__link(href="https://www.linkedin.com/")
+                                    img.js-icon2(src="src/img/social2.png" alt="linkedin-icon")
+                .subfooter
+                    p Trinity Court, Molly Millars Ln, Wokingham RG41 2PY, United Kingdom
+
+
+                            

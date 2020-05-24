@@ -1,0 +1,794 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:500,600|Roboto:400,500,700&display=swap');
+@import "../scss-files/_all-va-bles.scss";
+@import "../scss-files/_null.scss";
+
+body {
+    background-color: $grey1;
+}
+.wrapper {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 100%;
+    &__flex-sb {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: justify;
+                justify-content: space-between;
+    }
+
+    &__flex-row {display: -webkit-box;display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+                flex-direction: row;
+    }
+    &__flex-sa {
+        display: -webkit-box;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+.container {
+    max-width: 1210px;
+padding: 0 15px;
+margin: 0 auto;
+}
+.page {
+    min-height: 100%;
+    padding-top: 30px;
+    display: flex;
+}
+
+.main-screen{
+    max-width: 1280px;
+    margin: 0 auto;
+    -webkit-box-flex:1;
+    flex:1 0 100%;
+    background-color: $grey1;
+    }
+.logo-menu__pos {
+    margin-bottom: 23px;
+}
+.menu {
+    &__topmenu {
+        position: relative;
+        width: 100px;
+    }
+    &__submenu {
+        margin-top: 10px;
+        position: absolute;
+        display: none;
+        width: 120px;
+        z-index: 1000;
+    }
+    &__li--view {
+        padding: 8px 0;
+    }
+    width: 370px;
+    &__list {
+        display: -webkit-box;
+        display: flex;
+-webkit-box-orient: horizontal;
+-webkit-box-direction: normal;
+        flex-direction: row;
+-webkit-box-pack: justify;
+        justify-content: space-between;
+position: relative;
+margin-top: 15px;
+    }
+     
+    &__a {
+        @include Roboto(400,16px);
+        color: $grey5;
+        line-height: 12px;
+        
+        &:hover {
+            color: $darkgrey;  
+            border-bottom: 1px dotted $grey7;
+        }
+        &:active {
+            font-size: 18px;
+            margin-left: -8px;
+        }
+        
+        }      
+    &__btn {
+        @include Roboto(400,16px);
+        color: $blue;
+        line-height: 12px;
+padding: 18px 26px 20px 25px;
+background-color: $grey1;      
+border: 1px solid $grey3;
+border-radius: 10px;
+cursor: pointer;
+    &:hover {
+        background-color: darken($grey1, 1.25%);
+    }
+}
+}
+.hide-show {
+&__dark-block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 500;
+}
+&__hidden-block {
+    padding: 45px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top:50%;
+    left: 50%;
+    z-index: 1000;
+width: 500px;
+height: 250px;
+background-color: #fff;
+color: $darkgrey;
+border: 1px solid $grey5;
+border-radius:10px;
+box-shadow: 0 0 30px rgba(63, 114, 175, 0.5);
+@include Playfair(700,22px);
+text-align: center;
+line-height: 40px;}
+}
+.hide {display: none;}
+.expand::after {
+    content: 'expand_more';
+    @include Material-icons-style();
+    position: absolute;
+    font-size: 20px;
+    color: $grey4;
+    font-style: normal;
+font-weight: 600;
+z-index: 10;
+}
+.expand__li::after {top:-5px;
+}
+
+.belief-info {
+background-color: $grey1;
+&__block{
+    max-width: 741px;
+    height: 620px;}
+&__container {
+    margin-left: 53px;
+}
+    &__title-belief {
+        @include Playfair(500,50px);
+        color: $darkgrey;
+        line-height: 72px;
+        margin: 91px 0 31px 0;
+        max-width: 294px;
+    }
+    &__text-belief {
+        @include Roboto(400,21px);
+        line-height: 21px;
+        margin-bottom: 69px;
+    }
+}
+.phone-submit {
+@include Roboto(500,16px);
+text-align: left;
+&__pos {
+    margin-bottom: 89px;
+}
+    &__phone {
+-moz-appearance: textfield;
+width: 370px;
+height: 50px;
+border-radius: 25px;
+background-color: $lightblue;
+margin-bottom: 30px;
+&::-webkit-inner-spin-button { 
+    display: none;
+  }
+&[placeholder] {
+    padding-left: 20px;
+}
+    }
+    &__rate {
+-moz-appearance: textfield; 
+width: 170px;
+height: 50px;
+border-radius: 25px;
+background-color: $lightblue;
+margin-right: 30px;
+&::-webkit-inner-spin-button { 
+    display: none;
+  }
+&[placeholder] {
+    padding-left: 20px;
+}
+    }
+
+    &__submit {
+width: 170px;
+height: 50px;
+border-radius: 25px;
+background-color: $blue;
+color: $white;
+cursor: pointer;
+text-align: left;
+    padding-left: 20px;
+    &:hover {
+        background-color: lighten($blue, 6.25%);
+    }
+    }
+}
+.main-screen__img-pos {
+    width: 725px;
+height: 620px;
+    background-color: $lightblue;
+    position: relative;
+}
+.main-screen__img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 35%;
+    left: 15%;
+}
+.features {
+    background-color: $white;
+    &__title {   
+        padding-top: 103px;
+        margin-bottom: 17px;
+    }
+    &__text {
+        margin-top: 17px;
+        margin-bottom: 61px;
+    }
+    &__advantages {
+        margin: 0 auto;
+        max-width: 1280px;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+        margin-bottom: 100px;    
+    }
+}
+.title {
+    @include Playfair(400,36px);
+color: $darkblue;
+text-align: center;
+&::after {
+    content: ' ';
+    width: 40px;
+height: 1px;
+background-color: $blue;
+display: block;
+margin: 0 auto;
+margin-top: 16px;
+}
+}
+.text {
+    text-align: center;
+    @include Roboto(400,14px);
+color: $grey6;
+text-transform: uppercase;
+}
+.advantages-elem {
+    &__icon1 {
+        text-align: center;
+        margin: 30px 0 29px 0;
+    }
+&__icon2 {
+    text-align: center;
+    margin: 39px 0 35px 0;
+}
+&__icon3 {
+    text-align: center;
+    margin: 31px 0 29px 0;
+}
+    &__title {
+        @include Playfair(400,28px);
+        text-align: center;
+        color: $darkgrey;
+margin-bottom: 25px;
+    }
+    &__text {
+        text-align: center;
+        width: 270px;
+        color: $grey7;
+        @include Roboto(400,15px);
+line-height: 24px;
+padding-bottom: 28px;
+    }
+}
+.steps {
+    &__title {
+        margin: 0 0 17px 0;
+        padding-top: 69px;
+    }
+    &__text {
+        margin-bottom: 61px;
+    }
+}
+.steps-elem {
+    &__title {
+color: $grey6;
+@include Playfair(600,30px);
+text-transform: uppercase;
+margin-bottom: 30px;
+    }
+    &__text {
+color: $grey7;
+@include Roboto(400,18px);
+line-height: 28px;
+max-width: 315px;
+margin-bottom: 66px;
+    }
+}
+.action {
+    background-color: $white;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.action-block {
+    width: 756px;
+height: 393px;
+box-shadow: 0 0 30px rgba(63, 114, 175, 0.5);
+background-color: $blue;
+margin: 0 auto;
+position: relative;
+    &__decor1 {
+        position: absolute;
+    }
+    &__decor2 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    &__title {
+        color: $white;
+        @include Roboto(700,48px);
+padding-top: 70px;
+text-align: center;
+margin-bottom: 40px;
+    }
+    &__text {
+        color: $white;
+        @include Roboto(400,18px);
+line-height: 31px;
+margin: 0 auto;
+margin-bottom: 46px;
+max-width: 532px;
+    }
+    &__button {
+        @include buttons(200px,50px,25px,$darkblue);
+margin: 0 auto;
+color: $white;
+@include Roboto(500,16px);
+display: -webkit-box;
+display: flex;
+-webkit-box-align: center;
+        align-items: center;
+-webkit-box-pack: center;
+        justify-content: center;
+        cursor: pointer;
+        &:hover {
+            background-color: lighten($darkblue, 6.25%);
+        }
+    }
+}
+.chosen-container-multi .chosen-choices li.search-choice {
+    margin-top: -5px;
+}
+.employees {
+    background-color: $white;
+    &__block {
+        background-color: $blue;
+        max-width: 1280px;
+    height: 222px;
+    margin: 0 auto;
+position: relative;
+    }
+    &__titles {
+        display: flex;
+        justify-content: center;
+        margin: 0 0 16px 25px;
+        padding-top: 70px;
+        color: $white;
+@include Roboto(400,18px);
+    }
+    &__title {
+        display: inline-block;
+        width: 270px;
+        margin-right: 30px;
+    }
+    &__buttons {
+        display: flex;
+        justify-content: center;   
+    }
+    &__button1 {
+        padding-left: 15px;
+        @include buttons(270px,48px,24px,$grey1);
+        margin-right: 30px;
+        cursor: pointer;
+        z-index: 100;
+        -moz-appearance: textfield;
+        &::-webkit-inner-spin-button { 
+            display: none;
+          }
+    }
+    &__button2 {
+        padding-left: 15px;
+        padding-right: 30px;
+        @include buttons(270px,48px,24px,$grey1);
+        margin-right: 30px;
+        position: relative;
+        cursor: pointer;
+        -moz-appearance: textfield;
+        &::-webkit-inner-spin-button { 
+            display: none;
+          }
+    }
+    .chosen-container {
+        padding-left: 15px;
+        padding-right: 30px;
+        @include buttons(268px,46px,24px,$grey1);
+        margin-right: 30px;
+        cursor: pointer;
+        position: relative;
+    }
+    .chosen-choices {
+        position: relative;
+        top: 2px;
+        background-color: $grey1;
+        width: 100%;
+        height: 90%;
+        padding-top: 15px;
+        margin-right: 30px;
+        cursor: pointer;
+        border: none;
+    }
+    .chosen-container-multi .chosen-choices {
+        background-image: none;
+    border: none;
+box-shadow: none;}
+
+    .search-field {
+        position: relative;
+        bottom: 5px;
+        @include Roboto(500,16px);
+        color: $grey5;
+        max-width: 230px;
+    }
+   .chosen-drop {
+        max-width: 230px;
+    }
+    .b-input {
+        display: inline-block;
+        position: relative;
+        &__input::-webkit-calendar-picker-indicator {
+                display: none;
+              }
+      }
+      .b-input:before {
+        content: '';
+        position: absolute;
+        pointer-events: none;  
+      }
+      .b-input:before {
+        content: 'expand_more';
+        @include Material-icons-style;
+        font-size: 20px;
+        color: $grey4;
+        font-style: normal;
+        font-weight: 600;
+        top: 50%;
+        right: 35px;
+        margin-top: -20px;
+        width: 30px;
+        height: 30px;
+        line-height: 40px;
+        text-align: center;
+        z-index: 1;
+      }
+    &__button3 {
+        @include buttons(270px,48px,24px,$blue);
+        border: 1px solid $grey1;
+        color: $white;
+        display: flex;
+            align-items: center;
+    justify-content: center;
+        @include Roboto(500,16px);
+        cursor: pointer;
+        z-index: 100;
+        &:hover {
+            background-color: lighten($blue, 6.25%);
+        }
+    }
+}
+.decor3 {position: absolute;
+    z-index: 0;
+}
+.decor4 {position: absolute;
+right: 0;
+z-index: 0;
+-webkit-transform: rotate(180deg);
+        transform: rotate(180deg);}
+.expand__btn::after {
+right: 10px;
+top: 30%;
+color: $blue;
+z-index: 1000;
+}
+.price {
+background-color: #fff;
+		&__title {
+            margin: 0 0 17px 0;
+            padding-top: 100px;
+		}
+		&__text {
+            margin-bottom: 71px;
+		}
+}
+.tiers {
+    display: flex;
+    justify-content: center;
+}
+.tier {
+    width: 370px;
+    height: 517px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: $white;
+    text-align: center;
+    &__pos {
+        margin-right: 30px;
+margin-bottom: 120px;
+    }
+		&__title {
+            display: flex;
+            align-items: center;
+    justify-content: center;
+margin: 0 0 45px 0;
+height: 60px;
+color: $white;
+@include Roboto(500,28px);
+background-color: $blue;
+		}
+        &__title--dark {background-color: $darkblue;}
+		&__price {
+            color: $blue;
+            width: 330px;
+            margin: 0 auto;
+            border-bottom: 1.5px solid $blue;
+@include Roboto(700,42px);
+padding-bottom: 45px;
+        }
+        &__price--dark { border-bottom: 1.5px solid $darkblue;
+            color: $darkblue;
+        }
+		&__currency {
+            vertical-align: super;
+            font-size: 24px;
+		}
+		&__month {
+            font-size: 24px;
+            vertical-align: sub;
+		}
+		&__options {
+            margin-top: 45px;
+            & :last-child {margin-bottom: 35px;}
+		}
+		&__option-li {
+            margin-bottom: 25px;
+            @include Roboto(400,15px);
+		}
+		&__btn {
+            width: 200px;
+height: 50px;
+border-radius: 25px;
+background-color: $blue;
+@include buttons(200px,50px,25px,$blue);
+color: $white;
+@include Roboto(500,16px);
+cursor: pointer;
+&:hover {
+    background-color: lighten($blue, 6.25%);
+}
+        }
+        &__btn--dark {
+            background-color: $darkblue;
+            &:hover {
+                background-color: lighten($darkblue, 6.25%);
+            }
+        }
+}
+.partners {
+
+    &__title {
+        margin: 0 0 17px 0;
+        padding-top: 73px;
+    }
+
+    &__text {
+        margin-bottom: 60px;
+    }
+
+    &__links {
+        padding-bottom: 70px;
+    }
+
+}
+.wrapper-flex-se {
+    display: flex;
+    justify-content: space-evenly;
+}
+.review {
+background-color: #fff;
+    &__title {
+        padding-top: 100px;
+        margin-bottom: 17px;
+    }
+
+    &__text {
+        margin-bottom: 71px;
+    }
+}
+@import "../scss-files/_slider.scss";
+.faq {
+
+    &__title {padding-top: 73px;
+        margin-bottom: 17px;
+    }
+
+    &__text {margin-bottom: 65px;
+    }
+
+    &__block {
+        max-width: 568px;
+        margin-bottom: 50px;
+    }
+
+    &__block-title {
+        color: $darkgrey;
+        @include Roboto(400,20px);
+        margin-bottom: 16px;
+    }
+
+    &__block-text {
+        color: $grey7;
+        @include Roboto(400,15px);
+line-height: 24px;
+    }
+
+    &__button {
+        @include buttons(200px,50px,25px,$blue);
+color: $white;
+@include Roboto(500,16px);
+margin: 0 auto;
+margin-bottom: 70px;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+&:hover {
+    background-color: lighten($blue, 6.25%);
+}
+    }
+}
+.map {
+    width: 1280px; 
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+.map-contacts {
+    padding: 60px 0 0 31px;
+    z-index: 100;
+    &__pos {
+    position: absolute;
+left: 255px;
+top: 72px;}
+    width: 270px;
+    height: 356px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: $white;
+		&__title {
+            color: $darkgrey;
+            @include Roboto(400,26px);
+            padding-left: 1px;
+            margin-bottom: 35px;
+		}
+		&__text {
+            margin-bottom: 15px;
+            color: $grey7;
+            @include Roboto(400,15px);
+            font-family: Roboto;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 25px;
+        & p:first-child {
+            font-weight: 900;}
+    }
+}
+
+.superfooter {
+    padding: 70px 55px 0 55px;
+    background-color: $darkblue;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    @include Roboto(400,15px);
+    color: $grey2;
+		&__logo-text {
+            margin-bottom: 50px;
+            margin-right: 80px;
+		}
+
+		&__text {
+            max-width: 367px;
+           
+line-height: 22px;
+		}
+
+		&__links-blocks {
+            display: flex;
+            justify-content: space-between;
+            width: 723px;
+            
+		}
+
+		&__link-title {
+            color: $white;
+@include Roboto(500,18px);
+margin-bottom: 30px;
+		}
+
+		&__link-text {
+            display: flex;
+            flex-direction: column;
+		}
+
+		&__link {
+            position: relative;
+            color: $white;
+@include Roboto(400,15px);
+margin-bottom: 30px;
+
+&:hover {
+    border-bottom: 1px dotted $white;
+margin-bottom: 29px;}
+
+&:active {
+    color: $grey3;
+    border-bottom: 1px dotted $white;
+margin-bottom: 29px;
+		}
+    }
+		&__link-icons {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+}
+.js-icon1 {width: 30px;
+height: 30px;
+}
+.js-icon2 {width: 30px;
+    height: 30px;
+}
+.superfooter__link-icons .superfooter__link:hover {
+border: none;}
+.subfooter {
+    background-color: $darkblue;
+    max-width: 1280px;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    margin: 0 auto;
+    border-top: 1px solid $grey2;
+    color: $grey2;
+    @include Roboto(400,15px);
+    height: 70px;
+}
+
+
+
+
