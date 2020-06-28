@@ -27,7 +27,7 @@ position: relative;
     &__text {
         padding: 40px 10px 26px 10px;
         color: $grey7;
-        @include Roboto(500,18px);
+        @include Roboto(18px,500);
 line-height: 26px;
 max-width: 400px;
 margin: 0 auto;
@@ -37,24 +37,24 @@ position: relative;
 
     &__name {
         color: $grey7;
-        @include Roboto(400,16px);
+        @include Roboto(16px);
 line-height: 24px;
 margin: 0 auto;
 z-index: 100;
 position: relative;
     }
     &__comma {
-        @include Playfair(900,172px);
+        @include Playfair(172px,900);
         color: $lightblue;
         position: absolute;
-        // bottom: 37.5%;
-        // left: 41.5%;
         z-index: 0;
         transform: translate(-50%,-50%);
         top: 20%;
         left: 50%;
-    
     }
 }
 
-
+.slider .slick-dots li button:before {
+    padding-top: 10px;
+    font-size: 20px; 
+}

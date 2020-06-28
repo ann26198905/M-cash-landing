@@ -22,25 +22,25 @@ $fontfamily: Roboto;
     /* Support for IE. */
     font-feature-settings: "liga";
   }
-@mixin Roboto($fw: 400, $fs) {
+@mixin Roboto($fs, $fw: 400) {
     font-family: Roboto;
     font-style: normal;
 font-weight: $fw;
 font-size: $fs;
 }
 
-@mixin Playfair($fw: 400, $fs) {
+@mixin Playfair($fs, $fw: 400) {
     font-family: "PlayfairDisplay";
     font-style: normal;
 font-weight: $fw;
 font-size: $fs;
 }
 
-@mixin buttons($width,$height: 50px,$br: 25px,$bc) {
+@mixin buttons($width,$bc,$height: 50px,$br: 25px) {
     width: $width;
     height: $height;
-    border-radius: $br;
     background-color: $bc;
+    border-radius: $br;
     }
 
 $grey2: #ededed;
