@@ -19,7 +19,7 @@ const eslint               = require('gulp-eslint');
 
 //Порядок подключения css файлов
 var cssFiles = [
-   'src/fonts/iconfont/material-icons.css', //плагин
+   'src/fonts/iconfont/material-icons.css',
    'src/slick/slick/slick.css', //плагин
    'src/slick/slick/slick-theme.css', //плагин
    'src/chosen/chosen.min.css', //плагин
@@ -46,7 +46,8 @@ var jsFiles = [
 //Прочие необходимые файлы, перенос в build
 var OtherFiles = [
    'src/chosen/*.png',
-   '*.+(ico|php)'
+   'src/slick/slick/ajax-loader.gif',
+   'src/*.+(ico|php)'
 ]
 
 
@@ -158,7 +159,7 @@ function img() {
 
 // Переносим шрифты в продакшен
 function fonts() {
-	return gulp.src('src/fonts/**/*') 
+	return gulp.src('src/**/*.+(eot|svg|ttf|woff)') 
 	   .pipe(gulp.dest('build/fonts'));
 }
 

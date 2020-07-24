@@ -189,7 +189,7 @@ body {
 
 .expand::after {
   content: 'expand_more';
-  font-family: Material Icons;
+  font-family: 'Material Icons';
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -551,7 +551,7 @@ body {
     pointer-events: none; }
   .employees .b-input:before {
     content: 'expand_more';
-    font-family: Material Icons;
+    font-family: 'Material Icons';
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -786,7 +786,7 @@ body {
 
 .slider .slick-dots li button:before {
   padding-top: 10px;
-  font-size: 20px; }
+  font-size: 16px; }
 
 .faq__title {
   padding-top: 73px;

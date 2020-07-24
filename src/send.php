@@ -12,7 +12,7 @@ if(!empty($_POST['DayRate']) && !empty($_POST['PhoneNumber'])){
 $DayRate = trim(strip_tags($_POST['DayRate']));
 $PhoneNumber = trim(strip_tags($_POST['PhoneNumber']));
 
-mail('infosendin@yandex.ru', 'Письмо с M-cash form Day Rate', 
+mail('info@web-fls.ru', 'Письмо с M-cash form Day Rate', 
 'Answer from M-cash form Day Rate. Phone Number:'
 .$PhoneNumber.'<br />Day Rate: '.$DayRate
 // ,"FROM: Test\r\n MIME-Version: 1.0\r\n Content-type:text/html;charset=utf-8"
